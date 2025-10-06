@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Garage Sale Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>👨‍💻 John Doe's Garage Sale</h1>
+    <p>Web Developer • Designer • Garage Sale Aficionado</p>
+  </header>
+
+  <section class="portfolio">
+    <h2>Portfolio</h2>
+    <ul>
+      <li><a href="#">Project One</a></li>
+      <li><a href="#">Project Two</a></li>
+      <li><a href="#">GitHub: github.com/johndoe</a></li>
+    </ul>
+  </section>
+
+  <section class="post-item">
+    <h2>Post an Item for Sale</h2>
+    <form id="itemForm">
+      <input type="text" id="itemName" placeholder="Item name" required />
+      <textarea id="itemDesc" placeholder="Item description" required></textarea>
+      <input type="file" id="itemImage" accept="image/*" required />
+      <button type="submit">Post Item</button>
+    </form>
+  </section>
+
+  <section class="items-list">
+    <h2>Items for Sale</h2>
+    <div id="itemsContainer"></div>
+  </section>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
