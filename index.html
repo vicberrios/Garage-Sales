@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Garage Sale Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>👨‍💻 Texas Garage Sale</h1>
     <p>Post Your Garage Sales Here!</p>
   </header>
-  </section>
 
   <section class="post-item">
-    <h2>Post an Item for Sale</h2>
-    <form id="itemForm">
-      <input type="text" id="itemName" placeholder="Item name" required />
-      <textarea id="itemDesc" placeholder="Item description" required></textarea>
-      <input type="file" id="itemImage" accept="image/*" required />
-      <button type="submit">Post Item</button>
+    <h2>Post a Garage Sale</h2>
+    <form id="saleForm">
+      <input type="text" id="saleTitle" placeholder="Sale title (e.g., Neighborhood Sale)" required />
+      <input type="text" id="saleAddress" placeholder="Address (e.g., 123 Main St, TX)" required />
+      <input type="datetime-local" id="saleDate" required />
+      <textarea id="saleDesc" placeholder="Optional description"></textarea>
+      <input type="file" id="saleImage" accept="image/*" />
+      <button type="submit">Post Sale</button>
     </form>
   </section>
 
   <section class="items-list">
-    <h2>Items for Sale</h2>
-    <div id="itemsContainer"></div>
+    <h2>Upcoming Garage Sales</h2>
+    <div id="salesContainer"></div>
   </section>
 
+  <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
